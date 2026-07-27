@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  min-width: 80px;
+}
+.track {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-elevated);
+  border-radius: 100px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.fill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 0.4s ease;
+}
+.value {
+  font-size: 0.82rem;
+  font-weight: 700;
+  min-width: 34px;
+  text-align: right;
+  font-family: var(--font-display);
+}

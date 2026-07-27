@@ -1,0 +1,21 @@
+{
+  "name":    "drivex",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DriveX — Blockchain P2P Car Rental Platform",
+  "scripts": {
+    "chain":         "npx hardhat node",
+    "compile":       "npx hardhat compile",
+    "deploy:local":  "npx hardhat run scripts/deploy.js --network localhost",
+    "test:contracts":"npx hardhat test",
+    "backend":       "cd backend && npm run dev",
+    "frontend":      "cd frontend && npm start",
+    "install:all":   "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "setup": "npm run install:all && npm run compile"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv":   "^16.4.5",
+    "hardhat":  "^2.22.5"
+  }
+}

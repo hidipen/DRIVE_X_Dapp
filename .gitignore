@@ -1,0 +1,10 @@
+node_modules/
+.env
+cache/
+artifacts/
+frontend/build/
+backend/abi/
+coverage/
+typechain-types/
+backend/.env
+frontend/.env

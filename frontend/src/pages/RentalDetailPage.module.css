@@ -1,0 +1,66 @@
+.page { padding: 40px 0 80px; }
+
+.header { margin-bottom: 28px; }
+.titleRow { display: flex; align-items: center; gap: 14px; margin-bottom: 4px; flex-wrap: wrap; }
+.titleRow h1 { font-size: 1.8rem; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  align-items: flex-start;
+}
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+
+.main { display: flex; flex-direction: column; gap: 20px; }
+
+.partyRow { display: flex; gap: 24px; flex-wrap: wrap; }
+.partyItem { display: flex; flex-direction: column; gap: 4px; }
+.partyLabel {
+  font-size: 0.72rem; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--text-muted); font-weight: 600;
+}
+.partyAddr { font-family: monospace; font-size: 0.875rem; font-weight: 600; }
+
+.timeGrid { display: flex; flex-direction: column; gap: 12px; }
+.timeRow  { display: flex; align-items: flex-start; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--border-soft); }
+.timeRow:last-child { border-bottom: none; }
+
+.fuelRows { display: flex; flex-direction: column; gap: 14px; }
+
+.finRows  { display: flex; flex-direction: column; gap: 12px; }
+.finRow   { display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+
+/* Sidebar actions */
+.actionSection {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+.actionSection:last-child { border-bottom: none; padding-bottom: 0; }
+.actionTitle {
+  font-size: 0.85rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--text-muted); margin-bottom: 10px;
+}
+.actionInputs { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+
+.otpDisplay {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  background: var(--accent-glow);
+  border: 1px solid var(--accent-dim);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  margin-top: 14px;
+  text-align: center;
+}
+.otpLabel { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 600; }
+.otpCode  {
+  font-family: var(--font-display);
+  font-size: 2.2rem; font-weight: 800;
+  color: var(--accent); letter-spacing: 0.15em;
+}
+
+.finalState {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 10px; padding: 32px 0; text-align: center;
+}

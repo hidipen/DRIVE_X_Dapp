@@ -1,0 +1,92 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 12, 16, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+.logo:hover { text-decoration: none; }
+.logoIcon { color: var(--accent); font-size: 1.1rem; }
+.accent   { color: var(--accent); }
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.link, .activeLink {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition), background var(--transition);
+}
+.link:hover      { color: var(--text); background: var(--bg-elevated); text-decoration: none; }
+.activeLink      { color: var(--accent); background: var(--accent-glow); }
+.activeLink:hover { text-decoration: none; }
+
+.actions { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+
+.walletGroup { display: flex; align-items: center; gap: 10px; }
+
+.errorChip {
+  max-width: 340px;
+  color: var(--red);
+  font-size: 0.78rem;
+  line-height: 1.25;
+  text-align: right;
+}
+
+.walletChip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 5px 14px;
+  font-size: 0.82rem;
+  font-family: monospace;
+  color: var(--text-muted);
+}
+
+.dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .links { display: none; }
+}
